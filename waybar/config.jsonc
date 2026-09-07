@@ -1,0 +1,73 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 35,
+
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "network",
+        "bluetooth",
+        "pulseaudio",
+        "backlight",
+        "battery",
+        "custom/power"
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "default": "",
+            "active": ""
+        }
+    },
+
+    "network": {
+        "format-wifi": "󰤨  {essid}",
+        "format-ethernet": "󰈀  {ipaddr}",
+        "format-disconnected": "󰤭  Sin conexión",
+        "tooltip-format": "{ifname}: {ipaddr}"
+    },
+
+    "bluetooth": {
+        "format": "󰂯  {status}",
+        "format-connected": "󰂯  {device_alias}",
+        "format-disabled": "󰂲  Apagado",
+        "tooltip-format": "{controller_alias}\n{num_connections} dispositivos"
+    },
+
+    "pulseaudio": {
+        "format": "󰕾  {volume}%",
+        "format-muted": "󰝟  Silenciado",
+        "tooltip-format": "{desc}"
+    },
+
+    "backlight": {
+        "format": "󰃠  {percent}%",
+        "tooltip-format": "Brillo: {percent}%"
+    },
+
+    "battery": {
+        "format": "󰁹  {capacity}%",
+        "format-charging": "󰂄  {capacity}%",
+        "format-full": "󰁹  {capacity}%",
+        "tooltip-format": "{capacity}%"
+    },
+
+    "clock": {
+        "format": "󰥔  {:%H:%M}",
+        "tooltip-format": "{:%A, %d de %B de %Y}"
+    },
+
+    "custom/power": {
+        "format": "󰐥",
+        "tooltip": true,
+        "on-click": "~/.config/waybar/scripts/power-menu.sh"
+    }
+}
