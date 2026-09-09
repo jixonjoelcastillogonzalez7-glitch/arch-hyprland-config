@@ -1,0 +1,7 @@
+sudo pacman -S brightnessctl playerctl wireplumber bluez bluez-utils networkmanager
+
+
+  #activar servicios 
+
+sudo systemctl enable --now bluetooth
+sudo systemctl enable --now NetworkManager
